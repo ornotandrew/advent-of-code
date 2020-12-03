@@ -1,6 +1,6 @@
 class Slope:
     def __init__(self, filename="input.txt"):
-        with open("input.txt", "r") as f:
+        with open(filename, "r") as f:
             lines = f.read().splitlines()
 
         self.trees = [[col == "#" for col in l] for l in lines]
