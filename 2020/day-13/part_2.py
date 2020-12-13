@@ -11,7 +11,7 @@ N = prod(m for i, m in bus_indexes)
 #
 # Note: to find the a_i coefficients, we "shift" the sequence of n_i (bus ids)
 # by the "offset" of bus_i in the set of all busses. We do this because we want
-# the sequence to land in the correct place (mod n_i).
+# a series of congruence equations which all equal the same thing.
 
 # fmt: off
 print(
