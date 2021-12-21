@@ -1,11 +1,9 @@
 use std::io::{self, BufRead};
 
 fn main() {
-    let input: Vec<i32> = io::stdin()
-        .lock()
-        .lines()
-        .map(|l| l.unwrap().parse().unwrap())
-        .collect();
+    let input: String = io::stdin().lock().lines().fold(String::new(), |acc, cur| {
+        format!("{}\n{}", acc, cur.unwrap())
+    });
 
     let mut answer = 0;
 
