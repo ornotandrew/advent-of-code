@@ -32,18 +32,18 @@ echo 'package main
 import "testing"
 
 func TestSolve_Part1(t *testing.T) {
-	answer := part1()
+	result := part1()
 	expected := 1
-	if answer != expected {
-		t.Errorf("Expected %d; Got %d", expected, answer)
+	if result != expected {
+		t.Errorf("Expected %d; Got %d", expected, result)
 	}
 }
 
 func TestSolve_Part2(t *testing.T) {
-	answer := part2()
+	result := part2()
 	expected := 1
-	if answer != expected {
-		t.Errorf("Expected %d; Got %d", expected, answer)
+	if result != expected {
+		t.Errorf("Expected %d; Got %d", expected, result)
 	}
 }
 ' > $dir/day_${day_number}_test.go
