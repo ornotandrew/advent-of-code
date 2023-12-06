@@ -4,6 +4,7 @@ dir=day-$day_number
 
 mkdir $dir
 touch $dir/input.txt
+touch $dir/input_small.txt
 
 echo 'package main
 
@@ -29,10 +30,14 @@ func part2(lines []string) int {
 
 echo 'package main
 
-import "testing"
+import (
+	"aoc2023/util"
+	"testing"
+)
 
 func TestSolve_Part1(t *testing.T) {
-	result := part1()
+	lines := util.GetLinesFromFile("input_small.txt")
+	result := part1(lines)
 	expected := 1
 	if result != expected {
 		t.Errorf("Expected %d; Got %d", expected, result)
@@ -40,7 +45,8 @@ func TestSolve_Part1(t *testing.T) {
 }
 
 func TestSolve_Part2(t *testing.T) {
-	result := part2()
+	lines := util.GetLinesFromFile("input_small.txt")
+	result := part2(lines)
 	expected := 1
 	if result != expected {
 		t.Errorf("Expected %d; Got %d", expected, result)
