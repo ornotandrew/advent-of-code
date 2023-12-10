@@ -99,7 +99,7 @@ func Test_findSmallestSeed(t *testing.T) {
 
 func TestSolve_Part1(t *testing.T) {
 	lines := util.GetLinesFromFile("input_small.txt")
-	result := part1(lines)
+	result := Part1(lines)
 	expected := 35
 	if result != expected {
 		t.Errorf("Expected %d; Got %d", expected, result)
@@ -108,7 +108,7 @@ func TestSolve_Part1(t *testing.T) {
 
 func TestSolve_Part2(t *testing.T) {
 	lines := util.GetLinesFromFile("input_small.txt")
-	result := part2(lines)
+	result := Part2(lines)
 	expected := 46
 	if result != expected {
 		t.Errorf("Expected %d; Got %d", expected, result)

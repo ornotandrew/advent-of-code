@@ -1,4 +1,4 @@
-package main
+package day_03
 
 import (
 	"aoc2023/util"
@@ -8,7 +8,7 @@ import (
 )
 
 func Test_findNumbers(t *testing.T) {
-	lines := util.GetLinesFromFile("input_1_small.txt")
+	lines := util.GetLinesFromFile("input_small.txt")
 	actual := findNumbers(lines)
 	expected := []Number{
 		{0, 0, 2, 467},
@@ -30,7 +30,7 @@ func Test_findNumbers(t *testing.T) {
 }
 
 func Test_findSymbols(t *testing.T) {
-	lines := util.GetLinesFromFile("input_1_small.txt")
+	lines := util.GetLinesFromFile("input_small.txt")
 	actual := findSymbols(lines)
 	expected := []Symbol{
 		{1, 3, '*'},
@@ -48,7 +48,7 @@ func Test_findSymbols(t *testing.T) {
 }
 
 func Test_numberIsAdjacentToSymbol(t *testing.T) {
-	lines := util.GetLinesFromFile("input_1_small.txt")
+	lines := util.GetLinesFromFile("input_small.txt")
 	numbers := findNumbers(lines)
 	symbols := findSymbols(lines)
 
@@ -78,7 +78,7 @@ func Test_numberIsAdjacentToSymbol(t *testing.T) {
 }
 
 func Test_getAdjacentNumbers(t *testing.T) {
-	lines := util.GetLinesFromFile("input_1_small.txt")
+	lines := util.GetLinesFromFile("input_small.txt")
 	numbers := findNumbers(lines)
 	symbols := findSymbols(lines)
 
@@ -103,8 +103,8 @@ func Test_getAdjacentNumbers(t *testing.T) {
 }
 
 func TestSolve_Part1(t *testing.T) {
-	lines := util.GetLinesFromFile("input_1_small.txt")
-	result := part1(lines)
+	lines := util.GetLinesFromFile("input_small.txt")
+	result := Part1(lines)
 	expected := 4361
 	if result != expected {
 		t.Errorf("Expected %d; Got %d", expected, result)
@@ -112,8 +112,8 @@ func TestSolve_Part1(t *testing.T) {
 }
 
 func TestSolve_Part2(t *testing.T) {
-	lines := util.GetLinesFromFile("input_1_small.txt")
-	result := part2(lines)
+	lines := util.GetLinesFromFile("input_small.txt")
+	result := Part2(lines)
 	expected := 467835
 	if result != expected {
 		t.Errorf("Expected %d; Got %d", expected, result)

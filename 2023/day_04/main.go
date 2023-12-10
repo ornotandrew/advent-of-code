@@ -1,22 +1,12 @@
-package main
+package day_04
 
 import (
-	"aoc2023/util"
-	"fmt"
 	"math"
-	"os"
 	"strconv"
 	"strings"
 )
 
-func main() {
-	inputFname := os.Args[1]
-	lines := util.GetLinesFromFile(inputFname)
-	fmt.Println(part1(lines))
-	fmt.Println(part2(lines))
-}
-
-func part1(lines []string) int {
+func Part1(lines []string) int {
 	cards := parse(lines)
 	score := 0
 
@@ -29,7 +19,7 @@ func part1(lines []string) int {
 	return score
 }
 
-func part2(lines []string) int {
+func Part2(lines []string) int {
 	cards := parse(lines)
 	counts := []int{}
 	copies := []int{}

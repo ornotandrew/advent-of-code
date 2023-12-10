@@ -1,9 +1,6 @@
-package main
+package day_02
 
 import (
-	"aoc2023/util"
-	"fmt"
-	"os"
 	"strconv"
 	"strings"
 )
@@ -11,14 +8,8 @@ import (
 type Draw = [3]int
 type Game = []Draw
 
-func main() {
-	inputFname := os.Args[1]
-	lines := util.GetLinesFromFile(inputFname)
-	fmt.Println(part1(lines, Draw{12, 13, 14}))
-	fmt.Println(part2(lines))
-}
-
-func part1(lines []string, maxDraw Draw) int {
+func Part1(lines []string) int {
+	maxDraw := Draw{12, 13, 14}
 	games := parse(lines)
 	score := 0
 	for gameId, game := range games {
@@ -35,7 +26,7 @@ func part1(lines []string, maxDraw Draw) int {
 	return score
 }
 
-func part2(lines []string) int64 {
+func Part2(lines []string) int64 {
 	games := parse(lines)
 	var score int64 = 0
 	for _, game := range games {

@@ -1,25 +1,16 @@
-package main
+package day_01
 
 import (
-	"aoc2023/util"
 	"fmt"
-	"os"
 	"strconv"
 	"strings"
 )
 
-func main() {
-	inputFname := os.Args[1]
-	lines := util.GetLinesFromFile(inputFname)
-	fmt.Println(part1(lines))
-	fmt.Println(part2(lines))
-}
-
-func part1(lines []string) int {
+func Part1(lines []string) int {
 	return solve(lines, false)
 }
 
-func part2(lines []string) int {
+func Part2(lines []string) int {
 	return solve(lines, true)
 }
 

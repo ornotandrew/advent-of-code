@@ -1,4 +1,4 @@
-package main
+package day_02
 
 import (
 	"aoc2023/util"
@@ -8,7 +8,7 @@ import (
 )
 
 func Test_Parse(t *testing.T) {
-	lines := util.GetLinesFromFile("input_1_small.txt")
+	lines := util.GetLinesFromFile("input_small.txt")
 	result := parse(lines)
 	expected := []Game{
 		//   r  g  b
@@ -45,8 +45,8 @@ func Test_Parse(t *testing.T) {
 }
 
 func TestSolve_Part1(t *testing.T) {
-	lines := util.GetLinesFromFile("input_1_small.txt")
-	answer := part1(lines, Draw{12, 13, 14})
+	lines := util.GetLinesFromFile("input_small.txt")
+	answer := Part1(lines)
 	expected := 8
 	if answer != expected {
 		t.Errorf("Expected %d; Got %d", expected, answer)
@@ -54,8 +54,8 @@ func TestSolve_Part1(t *testing.T) {
 }
 
 func TestSolve_Part2(t *testing.T) {
-	lines := util.GetLinesFromFile("input_1_small.txt")
-	answer := part2(lines)
+	lines := util.GetLinesFromFile("input_small.txt")
+	answer := Part2(lines)
 	expected := int64(2286)
 	if answer != expected {
 		t.Errorf("Expected %d; Got %d", expected, answer)
