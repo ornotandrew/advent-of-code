@@ -20,7 +20,10 @@ func GetLinesFromFile(fName string) []string {
 func GetNumbersBySeparator(str, separator string) []int {
 	numbers := []int{}
 	for _, strNum := range strings.Split(str, " ") {
-		num, _ := strconv.Atoi(strNum)
+		num, err := strconv.Atoi(strNum)
+		if err != nil {
+			continue
+		}
 		numbers = append(numbers, num)
 	}
 	return numbers
