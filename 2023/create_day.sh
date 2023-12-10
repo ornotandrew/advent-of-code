@@ -22,9 +22,11 @@ func main() {
 }
 
 func part1(lines []string) int {
+	return -1
 }
 
 func part2(lines []string) int {
+	return -1
 }
 ' > $dir/day_${day_number}.go
 
@@ -38,7 +40,7 @@ import (
 func TestSolve_Part1(t *testing.T) {
 	lines := util.GetLinesFromFile("input_small.txt")
 	result := part1(lines)
-	expected := 1
+	expected := -1
 	if result != expected {
 		t.Errorf("Expected %d; Got %d", expected, result)
 	}
@@ -47,7 +49,7 @@ func TestSolve_Part1(t *testing.T) {
 func TestSolve_Part2(t *testing.T) {
 	lines := util.GetLinesFromFile("input_small.txt")
 	result := part2(lines)
-	expected := 1
+	expected := -1
 	if result != expected {
 		t.Errorf("Expected %d; Got %d", expected, result)
 	}
