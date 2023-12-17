@@ -39,7 +39,7 @@ func main() {
 }
 ' > $dir/cmd/part_2/main.go
 
-echo 'package day_06
+echo 'package day_'${day_number}'
 
 func Part1(lines []string) int {
 	return -1
@@ -50,7 +50,7 @@ func Part2(lines []string) int {
 }
 ' > $dir/main.go
 
-echo 'package day_06
+echo 'package day_'${day_number}'
 
 import (
 	"aoc2023/util"
