@@ -29,6 +29,16 @@ func GetNumbersBySeparator(str, separator string) []int {
 	return numbers
 }
 
+func UnorderedPairs[T interface{}](items []T) [][2]T {
+	pairs := [][2]T{}
+	for i := 0; i < len(items); i++ {
+		for j := i + 1; j < len(items); j++ {
+			pairs = append(pairs, [2]T{items[i], items[j]})
+		}
+	}
+	return pairs
+}
+
 // greatest common divisor (GCD) via Euclidean algorithm
 func GCD(a, b int) int {
 	for b != 0 {
