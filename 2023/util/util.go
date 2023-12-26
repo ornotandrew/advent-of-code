@@ -29,6 +29,10 @@ func GetNumbersBySeparator(str, separator string) []int {
 	return numbers
 }
 
+func PopLeft[T interface{}](items []T) (T, []T) {
+	return items[0], items[1:]
+}
+
 func UnorderedPairs[T interface{}](items []T) [][2]T {
 	pairs := [][2]T{}
 	for i := 0; i < len(items); i++ {
