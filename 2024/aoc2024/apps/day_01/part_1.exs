@@ -1,0 +1,5 @@
+Main.get_parsed("input.txt")
+|> then(fn {left, right} -> [Enum.sort(left), Enum.sort(right)] end)
+|> Enum.zip()
+|> Enum.reduce(0, fn {left, right}, acc -> acc + abs(left - right) end)
+|> IO.puts()
