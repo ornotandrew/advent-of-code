@@ -18,7 +18,7 @@ echo 'defmodule Day do
   end
 
   def parse(file_contents) do
-    String.split(file_contents, "\n")
+    String.split(file_contents, "\\n")
     |> Enum.map(fn line ->
       String.split(line, " ")
       |> Enum.map(&parse_int!(&1))
@@ -34,8 +34,17 @@ echo 'defmodule Day do
 end' > lib/day.ex
 
 echo 'Day.get_parsed("input_1_small.txt")
-|> IO.inspect()' > part_1.exs
+|> IO.inspect(charlists: :as_lists)' > part_1.exs
 cat part_1.exs > part_2.exs
 
-echo "Created $dir"
-cd aoc2024/apps/$dir
+rm test/day_*_test.exs
+echo 'defmodule DayTest do
+  use ExUnit.Case
+  doctest Day
+
+  test "greets the world" do
+    assert Day.hello() == :world
+  end
+end' > test/day_test.exs
+
+echo "Created $dir"'
