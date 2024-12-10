@@ -37,7 +37,7 @@ echo 'Day.get_parsed("input_1_small.txt")
 |> IO.inspect(charlists: :as_lists)' > part_1.exs
 cat part_1.exs > part_2.exs
 
-rm test/day_*_test.exs
+rm test/day*_test.exs
 echo 'defmodule DayTest do
   use ExUnit.Case
   doctest Day
