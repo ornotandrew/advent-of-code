@@ -1,0 +1,5 @@
+Day.get_parsed("input.txt")
+|> Enum.filter(&Day.is_valid?([:plus, :mult], &1))
+|> Enum.map(&(elem(&1, 0)))
+|> Enum.sum()
+|> IO.inspect()
